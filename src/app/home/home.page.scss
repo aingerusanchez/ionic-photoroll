@@ -1,1 +1,7 @@
 
+// home.page.scss
+/** @see: https://ionicframework.com/docs/theming/advanced */
+
+ion-content {
+    --background: var(--ion-color-dark);
+}
