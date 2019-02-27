@@ -3,6 +3,7 @@
     "codelyzer"
   ],
   "rules": {
+    "extends": "tslint-ionic-rules/strict",
     "arrow-return-shorthand": true,
     "callable-types": true,
     "class-name": true,
@@ -47,7 +48,7 @@
     "no-bitwise": true,
     "no-console": [
       true,
-      "debug",
+      // "debug",
       "info",
       "time",
       "timeEnd",
