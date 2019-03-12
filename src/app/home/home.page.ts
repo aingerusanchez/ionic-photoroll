@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { environment } from 'src/environments/environment';
+import { UploadPage } from '../upload/upload.page';
+import { ModalController } from '@ionic/angular';
 
 @Component({
   selector: 'app-home',
@@ -11,7 +13,15 @@ export class HomePage {
   protected debug = environment.development;
   private CLASS_NAME = 'HomePage';
 
-  constructor() {
+  constructor(private modalCtrl: ModalController) {
     console.debug(`${this.CLASS_NAME}.constructor()`);
+  }
+
+  /** Abre la página para poder subir una nueva publicación */
+  presentUpload = async () => {
+    console.debug(`${this.CLASS_NAME}.cargarNuevaPublicacion()`);
+
+    const modalUpload = await this.modalCtrl.create({ component: UploadPage });
+    modalUpload.present();
   }
 }
