@@ -10,8 +10,8 @@ import { ModalController } from '@ionic/angular';
 })
 export class HomePage {
 
-  protected debug = environment.development;
-  private CLASS_NAME = 'HomePage';
+  protected readonly debug = environment.development;
+  private readonly CLASS_NAME = 'HomePage';
 
   constructor(private modalCtrl: ModalController) {
     console.debug(`${this.CLASS_NAME}.constructor()`);
