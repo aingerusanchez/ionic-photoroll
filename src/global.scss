@@ -1,11 +1,49 @@
 // http://ionicframework.com/docs/theming/
-@import '~@ionic/angular/css/core.css';
-@import '~@ionic/angular/css/normalize.css';
-@import '~@ionic/angular/css/structure.css';
-@import '~@ionic/angular/css/typography.css';
+@import "~@ionic/angular/css/core.css";
+@import "~@ionic/angular/css/normalize.css";
+@import "~@ionic/angular/css/structure.css";
+@import "~@ionic/angular/css/typography.css";
 
-@import '~@ionic/angular/css/padding.css';
-@import '~@ionic/angular/css/float-elements.css';
-@import '~@ionic/angular/css/text-alignment.css';
-@import '~@ionic/angular/css/text-transformation.css';
-@import '~@ionic/angular/css/flex-utils.css';
+@import "~@ionic/angular/css/padding.css";
+@import "~@ionic/angular/css/float-elements.css";
+@import "~@ionic/angular/css/text-alignment.css";
+@import "~@ionic/angular/css/text-transformation.css";
+@import "~@ionic/angular/css/flex-utils.css";
+
+ion-toolbar {
+  --background: var(--ion-color-primary);
+}
+
+ion-content {
+  --background: var(--ion-color-dark);
+
+  ion-card {
+    --background: var(--ion-color-tertiary) !important;
+
+    ion-item-group.post-actions {
+      display: flex;
+      justify-content: space-between;
+      ion-button {
+        --background: var(--ion-color-dark);
+      }
+      .like {
+        color: var(--ion-color-danger);
+      }
+      .guardar {
+        color: var(--ion-color-primary);
+      }
+      .compartir {
+        color: var(--ion-color-success);
+      }
+      /* ion-icon[name="heart"] {
+        color: var(--ion-color-danger);
+      }
+      ion-icon[name="save"] {
+        color: var(--ion-color-primary);
+      }
+      ion-icon[name="share"] {
+        color: var(--ion-color-success);
+      } */
+    }
+  }
+}
