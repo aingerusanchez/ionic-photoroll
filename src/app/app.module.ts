@@ -13,8 +13,8 @@ import { AppRoutingModule } from './app-routing.module';
 
 // Firebase
 import { AngularFireModule } from '@angular/fire';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
 // import { AngularFireAuthModule } from '@angular/fire/auth';
-// import { AngularFireDatabaseModule } from '@angular/fire/database';
 // import { AngularFireStorageModule } from '@angular/fire/storage';
 
 // Environment
@@ -35,13 +35,14 @@ import { UploadPage } from './pages/upload/upload.page';
     AppRoutingModule,
     FormsModule,
     AngularFireModule.initializeApp(environment.firebaseConfig, 'photoroll'),
+    AngularFireDatabaseModule,
     // AngularFireAuthModule,
-    // AngularFireDatabaseModule,
     // AngularFireStorageModule,
   ],
   providers: [
     StatusBar,
     SplashScreen,
+    // AngularFireDatabase,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]
