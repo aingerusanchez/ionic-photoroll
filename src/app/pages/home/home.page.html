@@ -13,9 +13,7 @@
       <ion-card-title color="light" text-center>{{ post.title }}</ion-card-title>
     </ion-card-header>
     <ion-card-content>
-      <ion-img
-        [src]="post.img"
-        alt="foto de {{ post.title }}"></ion-img>
+      <ion-img [src]="post.img" alt="foto de {{ post.title }}"></ion-img>
       <ion-item-group class="post-actions" padding-bottom>
         <ion-button class="like">
           <ion-icon name="heart"></ion-icon>&nbsp;27
@@ -40,6 +38,40 @@
       </ion-card-subtitle>
     </ion-card-content>
   </ion-card>
+
+  <div class="skeleton-container" *ngFor="let item of [1,2,3]">
+    <ion-card *ngIf="!posts" class="ion-margin-bottom">
+      <ion-card-header>
+        <ion-card-title text-center>
+          <ion-skeleton-text animated width="80%"></ion-skeleton-text>
+        </ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-img src="/assets/img/loading.jpg"></ion-img>
+        <ion-item-group class="post-actions" padding-bottom>
+          <ion-button class="like">
+            <ion-icon name="heart"></ion-icon>
+          </ion-button>
+          <ion-button class="guardar">
+            <ion-icon name="save"></ion-icon>
+          </ion-button>
+          <ion-button class="compartir">
+            <ion-icon name="share"></ion-icon>
+          </ion-button>
+        </ion-item-group>
+        <ion-card-subtitle text-right>
+          <ion-chip outline color="light">
+            <ion-avatar>
+              <ion-img src="/assets/img/default_profile.png" alt="foto del autor"> </ion-img>
+            </ion-avatar>
+            <ion-label>
+              <ion-skeleton-text animated width="100px"></ion-skeleton-text>
+            </ion-label>
+          </ion-chip>
+        </ion-card-subtitle>
+      </ion-card-content>
+    </ion-card>
+  </div>
 
   <ion-fab vertical="bottom" horizontal="end" slot="fixed">
     <ion-fab-button color="danger" title="Nueva publicación" (click)="presentUpload()">
