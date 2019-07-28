@@ -10,6 +10,10 @@
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
 
+[bold] {
+  font-weight: 600;
+}
+
 ion-toolbar {
   --background: var(--ion-color-primary);
 }
@@ -46,4 +50,10 @@ ion-content {
       } */
     }
   }
+}
+
+// CLASSES
+.post-img {
+  border-radius: 5%;
+  overflow: hidden;
 }
